@@ -36,7 +36,7 @@ player.on('playSong', (message, queue, song) => {
   .addField(`Song Duration: ${song.formattedDuration}`)
   .setDescription(`${song.name} has started playing`)
   player.on("addSong", (message, queue, song) => message.channel.send(
-    `Added ${song.name} - \`${song.formattedDuration}\` to the queue by ${song.user}`
+    `Added ${song.name} - \`${song.formattedDuration}\` to the queue by ${message.author.username}`
 ))
 
 message.channel.send(embed);
